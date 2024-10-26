@@ -10,29 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2ad15cc-08b0-48a7-8873-11eb1adb93e2" name="Changes" comment="casi listo">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/horoscopo.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/configuration/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/configuration/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/filter/LoginFiltro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/filter/LoginFiltro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/listener/ExcelDataLoaderListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/listener/ExcelDataLoaderListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/repository/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/repository/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/SignupServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/UnauthorizedServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/edutecno/final_drilling/servlets/UnauthorizedServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/actualizarUsuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/actualizarUsuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/buscarUsuario.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/buscarUsuario.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultaHoroscopo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultaHoroscopo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/eliminarCuenta.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/eliminarCuenta.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/sinAutorizacion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/sinAutorizacion.jsp" afterDir="false" />
+    <list default="true" id="b2ad15cc-08b0-48a7-8873-11eb1adb93e2" name="Changes" comment="supuestamente listo">
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +31,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -250,7 +235,7 @@
       <workItem from="1729773967100" duration="20617000" />
       <workItem from="1729811057269" duration="7881000" />
       <workItem from="1729861051533" duration="25279000" />
-      <workItem from="1729954556746" duration="12798000" />
+      <workItem from="1729954556746" duration="13159000" />
     </task>
     <task id="LOCAL-00001" summary="casi listo">
       <option name="closed" value="true" />
@@ -260,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729891818819</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="supuestamente listo">
+      <option name="closed" value="true" />
+      <created>1729977341721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729977341721</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +261,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="casi listo" />
-    <option name="LAST_COMMIT_MESSAGE" value="casi listo" />
+    <MESSAGE value="supuestamente listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="supuestamente listo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

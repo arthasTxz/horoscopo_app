@@ -1,6 +1,3 @@
-Aquí tienes un ejemplo de README para tu proyecto de Java con Servlets, Tomcat y PostgreSQL:
-
-
 # Proyecto Horóscopo con Java y Servlets
 
 Este proyecto es una aplicación web desarrollada en Java utilizando Servlets y JDBC. La aplicación permite gestionar usuarios y consultar su signo del horóscopo de acuerdo con su año de nacimiento. La base de datos está alojada en PostgreSQL y se conecta a través de un contenedor Docker.
@@ -32,8 +29,8 @@ Este proyecto es una aplicación web desarrollada en Java utilizando Servlets y 
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/usuario/proyecto-horoscopo.git
-   cd proyecto-horoscopo
+   git clone https://github.com/arthasTxz/horoscopo_app.git
+   cd horoscopo_app
    ```
 
 2. Crea el archivo `.war` con Maven:
@@ -75,10 +72,3 @@ Para que la aplicación se conecte correctamente a PostgreSQL, se utilizan varia
 - **`docker-compose.yml`**: Configura los contenedores para Tomcat y PostgreSQL.
 - **`init.sql`**: Script SQL para inicializar la base de datos.
 - **`horoscopo.xlsx`**: Archivo de datos de signos de horóscopo.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
-```
-
-Este README proporciona un resumen detallado del proyecto, los requisitos, y la configuración necesaria para ejecutarlo.
