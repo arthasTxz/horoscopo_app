@@ -60,9 +60,6 @@ public class UserServiceImpl implements UserService {
             usuario1.setFechaNacimiento(usuario.fechaNacimiento());
             usuario1.setHoroscopoId(horoscopo.getId());
             userRepository.saveUser(usuario1);
-            System.out.println();
-            System.out.println(horoscopo.getAnimal());
-            System.out.println(usuario);
         }
 
     }

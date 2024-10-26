@@ -29,11 +29,8 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        System.out.println(username);
-        System.out.println(password);
         Optional<Usuario> usuarioOptional = userService.login(username, password);
         if (usuarioOptional.isPresent()) {
-            System.out.println("Esta presente");
             HttpSession session = request.getSession();
             session.setAttribute("username", usuarioOptional.get().getUsername());
             response.sendRedirect(request.getContextPath() + "/home");

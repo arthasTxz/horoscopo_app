@@ -60,7 +60,7 @@
 
   <div class="btn-group">
     <!-- Formulario con método POST para eliminar la cuenta -->
-    <form action="/eliminarCuenta" method="POST">
+    <form action="${pageContext.request.contextPath}/eliminarCuenta" method="POST">
       <button type="submit" class="btn btn-danger">Sí, eliminar cuenta</button>
     </form>
 

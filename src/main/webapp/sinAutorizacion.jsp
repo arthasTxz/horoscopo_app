@@ -21,6 +21,7 @@
     <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
       <img src="${pageContext.request.contextPath}/asset/illegal-its-illegal.jpg" alt="Descripción de la imagen">
     </div>
+    <a href="${pageContext.request.contextPath}/login">Iniciar Sesion</a>
   </div>
   </body>
 </html>

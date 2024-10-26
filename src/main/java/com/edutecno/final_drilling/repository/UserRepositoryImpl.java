@@ -66,16 +66,14 @@ public class UserRepositoryImpl implements UserRepository {
         try(Connection conn = DatabaseConnection.getInstance().getConnection();
         PreparedStatement ps = conn.prepareStatement(query)
         ){
-            nose(usuario, ps);
+            setUserPreparedStatement (usuario, ps);
             ps.setInt(7, usuario.getId());
-            int rowsAffected = ps.executeUpdate();
-            System.out.println("Filas actualizadas: " + rowsAffected);
         }catch (SQLException e){
             e.printStackTrace();
         }
     }
 
-    private void nose(Usuario usuario, PreparedStatement ps) throws SQLException {
+    private void setUserPreparedStatement (Usuario usuario, PreparedStatement ps) throws SQLException {
         ps.setString(1, usuario.getNombre());
         ps.setString(2, usuario.getUsername());
         ps.setString(3, usuario.getEmail());
@@ -94,13 +92,7 @@ public class UserRepositoryImpl implements UserRepository {
             ps.setString(1, username);
             try(ResultSet rs = ps.executeQuery()){
                 if(rs.next()){
-                    int id = rs.getInt("id");
-                    String nombre = rs.getString("nombre");
-                    String get_username = rs.getString("username");
-                    String email = rs.getString("email");
-                    java.util.Date fechaNacimiento = rs.getDate("fecha_nacimiento");
-                    String animal = rs.getString("animal");
-                    usuarioResponseDto = new UsuarioResponseDto(id, nombre, get_username, email, fechaNacimiento, animal);
+                    usuarioResponseDto = getUsuarioResponseDto(rs);
                 }
             }
         }catch (SQLException e){
@@ -132,7 +124,6 @@ public class UserRepositoryImpl implements UserRepository {
         }catch (SQLException e){
             e.printStackTrace();
         }
-        System.out.println("Desde repo " + usuario);
         return usuario;
     }
 
@@ -143,7 +134,7 @@ public class UserRepositoryImpl implements UserRepository {
         try(Connection conn = DatabaseConnection.getInstance().getConnection();
         PreparedStatement ps = conn.prepareStatement(query);
         ){
-            nose(usuario, ps);
+            setUserPreparedStatement(usuario, ps);
             ps.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
@@ -171,13 +162,7 @@ public class UserRepositoryImpl implements UserRepository {
         ){
             UsuarioResponseDto usuario = null;
             while(rs.next()) {
-                int id = rs.getInt("id");
-                String get_nombre = rs.getString("nombre");
-                String get_username = rs.getString("username");
-                String email = rs.getString("email");
-                java.util.Date fechaNacimiento = rs.getDate("fecha_nacimiento");
-                String animal = rs.getString("animal");
-                usuario = new UsuarioResponseDto(id, get_nombre, get_username, email, fechaNacimiento, animal);
+                usuario = getUsuarioResponseDto(rs);
                 usuarios.add(usuario);
             }
         }catch (SQLException e) {
@@ -185,6 +170,18 @@ public class UserRepositoryImpl implements UserRepository {
         }
 
         return usuarios;
+    }
+
+    private UsuarioResponseDto getUsuarioResponseDto(ResultSet rs) throws SQLException {
+        UsuarioResponseDto usuario;
+        int id = rs.getInt("id");
+        String get_nombre = rs.getString("nombre");
+        String get_username = rs.getString("username");
+        String email = rs.getString("email");
+        java.util.Date fechaNacimiento = rs.getDate("fecha_nacimiento");
+        String animal = rs.getString("animal");
+        usuario = new UsuarioResponseDto(id, get_nombre, get_username, email, fechaNacimiento, animal);
+        return usuario;
     }
 
     @Override

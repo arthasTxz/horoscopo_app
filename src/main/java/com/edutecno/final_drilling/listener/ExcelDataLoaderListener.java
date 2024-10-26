@@ -31,16 +31,19 @@ public class ExcelDataLoaderListener implements ServletContextListener {
         List<Horoscopo> horoscopoList = horoscopoRepository.findAll();
         System.out.println(horoscopoList);
         if (horoscopoList.isEmpty()) {
-            try{
-                ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-                InputStream fis = classLoader.getResourceAsStream("horoscopo.xlsx");
-
-                if (fis == null) {
-                    throw new FileNotFoundException("No se encontró el archivo Excel en el classpath.");
-                }
+            String excelPath = "/app/horoscopo/horoscopo.xlsx";
+            try(FileInputStream fileInputStream = new FileInputStream(excelPath)) {
+                System.out.println("Encuentra el archivo Excel en la ruta");
+//                ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+//                InputStream fis = classLoader.getResourceAsStream("horoscopo.xlsx");
+//                String excelPath = "/app/horoscopo.xlsx";
+//
+//                if (fis == null) {
+//                    throw new FileNotFoundException("No se encontró el archivo Excel en el classpath.");
+//                }
 //            String excelFilePath = "/horoscopo.xlsx";
 //            FileInputStream fis = new FileInputStream(new File(excelFilePath));
-                XSSFWorkbook workbook = new XSSFWorkbook(fis);
+                XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
                 XSSFSheet sheet = workbook.getSheetAt(0);
 
                 for (Row row : sheet) {
@@ -59,7 +62,7 @@ public class ExcelDataLoaderListener implements ServletContextListener {
                 }
 
                 workbook.close();
-                fis.close();
+//                fileInputStream.close();
             }catch (Exception e){
                 e.printStackTrace();
             }

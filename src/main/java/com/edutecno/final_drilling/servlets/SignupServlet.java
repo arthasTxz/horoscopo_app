@@ -53,7 +53,6 @@ public class SignupServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            System.out.println(nombre + " " + username + " " + password + " " + email + " " + fechaNacimientoDate);
             UsuarioCreateDto usuarioCreateDto = new UsuarioCreateDto(nombre, username, email, fechaNacimientoDate, password);
             userService.saveUser(usuarioCreateDto);
             response.sendRedirect("login");

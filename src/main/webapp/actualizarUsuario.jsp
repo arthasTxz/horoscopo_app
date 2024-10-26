@@ -31,7 +31,7 @@
             <h4 class="mb-3">Modificar datos</h4>
 
             <% UsuarioUpdateDTO usuarioUpdateDTO = (UsuarioUpdateDTO) request.getAttribute("usuario"); %>
-            <form action="/modificarUsuario" method="post">
+            <form action="${pageContext.request.contextPath}/modificarUsuario" method="post">
                 <div class="row mb-3">
                     <label for="inputName" class="col-sm-4 col-form-label">Nombre:</label>
                     <div class="col-sm-8">

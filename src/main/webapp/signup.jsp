@@ -24,7 +24,7 @@
             <h4 class="mb-3">Registrate</h4>
 
 
-            <form action="/registro" method="post">
+            <form action="${pageContext.request.contextPath}/registro" method="post">
                 <div class="row mb-3">
                     <label for="inputName" class="col-sm-4 col-form-label">Nombre:</label>
                     <div class="col-sm-8">

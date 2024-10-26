@@ -10,6 +10,8 @@
   <name>final_drilling</name>
   <packaging>war</packaging>
 
+
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>17</maven.compiler.target>
@@ -62,7 +64,9 @@
   </dependencies>
 
   <build>
+      <finalName>horoscopo</finalName>
     <plugins>
+
 <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>

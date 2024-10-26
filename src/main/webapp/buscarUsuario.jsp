@@ -36,7 +36,7 @@
         <div class="card mb-3">
             <div class="card-body">
                 <h5 class="card-title">Buscar Usuarios</h5>
-                <form action="/buscarUsuario" method="GET" id="buscarDepartamentoForm"> <!-- Ajusta la acción a tu servlet -->
+                <form action="${pageContext.request.contextPath}/buscarUsuario" method="GET" id="buscarDepartamentoForm"> <!-- Ajusta la acción a tu servlet -->
                     <div class="row">
                         <!-- Buscar por Nombre -->
                         <div class="col-md-4">
@@ -90,7 +90,7 @@
         </thead>
         <tbody>
         <%
-            // Suponiendo que tienes una lista de clientes pasada desde el Servlet
+            // Suponiendo que tienes una lista de usuarios pasada desde el Servlet
             List<UsuarioResponseDto> listaUsuarios = (List<UsuarioResponseDto>) request.getAttribute("usuarioResponseDtos");
 
             if (listaUsuarios != null && !listaUsuarios.isEmpty()) {

@@ -19,7 +19,7 @@ public class LoginFiltro implements Filter{
         if (username.isPresent()) {
             chain.doFilter(request, response);
         } else{
-            ((HttpServletResponse)response).sendRedirect("/unauthorized");
+            ((HttpServletResponse)response).sendRedirect( ((HttpServletRequest) request).getContextPath() +"/unauthorized");
         }
     }
 }

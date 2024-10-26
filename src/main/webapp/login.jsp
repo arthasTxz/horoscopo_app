@@ -44,9 +44,9 @@
                 <%= request.getAttribute("errorMessage") %>
             </div>
             <% } %>
-            <p class="text-muted mb-4">Es necesario que inicies sesión para revisar tu horóscopo chino. Si todavía no tienes cuenta, haz click <a href="/registro">aquí</a>.</p>
+            <p class="text-muted mb-4">Es necesario que inicies sesión para revisar tu horóscopo chino. Si todavía no tienes cuenta, haz click <a href="${pageContext.request.contextPath}/registro">aquí</a>.</p>
 
-            <form action="/login" method="post">
+            <form action="${pageContext.request.contextPath}/login" method="post">
                 <div class="row mb-3">
                     <label for="inputUsername" class="col-sm-4 col-form-label">Nombre de usuario:</label>
                     <div class="col-sm-8">

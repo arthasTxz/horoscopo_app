@@ -38,10 +38,10 @@
 
     <!-- Grupo de botones centrados -->
     <div class="btn-group" role="group">
-        <a href="/consultaHoroscopo" class="btn btn-custom-teal text-white" >Conoce tu animal</a>
-        <a href="/buscarUsuario" class="btn btn-custom-teal text-white" >Buscar usuarios</a>
-        <a href="/modificarUsuario" class="btn btn-custom-teal text-white" >Modificar datos</a>
-        <a href="/eliminarCuenta" class="btn btn-custom-teal text-white" >Eliminar cuenta</a>
+        <a href="${pageContext.request.contextPath}/consultaHoroscopo" class="btn btn-custom-teal text-white" >Conoce tu animal</a>
+        <a href="${pageContext.request.contextPath}/buscarUsuario" class="btn btn-custom-teal text-white" >Buscar usuarios</a>
+        <a href="${pageContext.request.contextPath}/modificarUsuario" class="btn btn-custom-teal text-white" >Modificar datos</a>
+        <a href="${pageContext.request.contextPath}/eliminarCuenta" class="btn btn-custom-teal text-white" >Eliminar cuenta</a>
     </div>
 </div>
 </body>

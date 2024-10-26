@@ -11,6 +11,8 @@ public class UnauthorizedServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/sinAutorizacion.jsp").forward(request, response);
+        /*response.sendRedirect(request.getContextPath() + "/sinAutorizacion.jsp");*/
+
     }
 
     @Override

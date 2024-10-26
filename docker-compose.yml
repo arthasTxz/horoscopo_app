@@ -1,6 +1,24 @@
 version: '3.8'
 
 services:
+  tomcat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    volumes:
+      - ./horoscopo.xlsx:/app/horoscopo/horoscopo.xlsx
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=myapp
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+    networks:
+      - app-network
   db:
     image: postgres:13-alpine
     container_name: myapp
@@ -12,4 +30,11 @@ services:
       - "5433:5432"
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+
+
+networks:
+  app-network:
+    driver: bridge
 
